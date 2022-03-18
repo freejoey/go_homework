@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "com.example.homework/withdraw";
+
+package withdraw;
+
+service Withdraw{
+  rpc withdraw(WithdrawRequest) returns(WithdrawResponse){}
+}
+
+message WithdrawRequest{
+  int64 uid = 1;
+  float amount = 2;
+}
+
+message WithdrawResponse{
+  int64 wid = 1;
+
+  int64 uid = 2;
+
+  float amount = 3;
+
+  int64 createdAt = 4;
+
+  int64 updatedAt = 5;
+}
