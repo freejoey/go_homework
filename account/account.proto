@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "com.example.homework/account";
+
+package account;
+
+service Account{
+  rpc info(AccountInfoRequest) returns(AccountInfoResponse){}
+}
+
+message AccountInfoRequest{
+  int64 aid = 1;
+}
+
+message AccountInfoResponse{
+  int64 aid = 1;
+
+  int64 uid = 2;
+
+  float properties = 3;
+
+  string status = 4;
+
+  int64 createdAt = 5;
+
+  int64 updatedAt = 6;
+}
