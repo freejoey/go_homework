@@ -5,7 +5,7 @@ option go_package = "com.example.homework/withdraw";
 package withdraw;
 
 service Withdraw{
-  rpc withdraw(WithdrawRequest) returns(WithdrawResponse){}
+  rpc Withdraw(WithdrawRequest) returns(WithdrawResponse){}
 }
 
 message WithdrawRequest{
